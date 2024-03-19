@@ -1,3 +1,4 @@
+"use client";
 import {
   Navbar,
   MobileNav,
@@ -5,6 +6,7 @@ import {
   Button,
   IconButton,
 } from '@material-tailwind/react';
+import Link from 'next/link';
 import React, { useState, useEffect}  from 'react';
 
 export function NavBar() {
@@ -127,9 +129,17 @@ export function NavBar() {
         </Typography>
         <div className="hidden lg:block">{navList}</div>
         <div className="flex items-center gap-x-1">
-          <Button variant="text" size="sm" className="hidden lg:inline-block">
+
+
+        <Link
+            href="/login"
+            className="flex items-center  self-start rounded-lg  text-sm font-medium text-white transition-colors"
+          >
+           <Button variant="text" size="sm" className="hidden lg:inline-block">
             <span>Log In</span>
           </Button>
+          </Link>
+
           <Button
             variant="gradient"
             size="sm"
