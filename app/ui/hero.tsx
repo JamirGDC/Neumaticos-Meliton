@@ -1,3 +1,4 @@
+"use client";
 import { Carousel } from '@material-tailwind/react';
 import { MainFilter } from './mainfilter';
 
